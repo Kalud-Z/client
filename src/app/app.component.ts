@@ -15,14 +15,12 @@ interface Training {
 })
 
 export class AppComponent {
-  public tr1: Training;
+  title : string;
+  numOfTrainings : number;
 
-  constructor() {
-    this.tr1 = {
-      id = 425;
-      name = "tennis" ;
-      description = "nadal is the best"
-    }
-  }
-
+  allTrainings : Training[] = [
+    { id : 1 , name : 'tennis' , description : 'nadal is the best'},
+    { id : 2 , name : 'football' , description : 'chris is the best'},
+    { id : 3 , name : 'salsa' , description : 'shakira is the best'},
+  ]
 }
