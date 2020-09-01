@@ -12,7 +12,14 @@ export class TrainingListComponentComponent implements OnInit {
   @Input() manyTrainings : Training[];
 
 
+
   ngOnInit(): void {
   }
+
+
+  onListItemClicked(event , tr: Training) {
+    console.log(event , tr.name )
+  }
+
 
 }

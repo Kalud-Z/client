@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 
-interface Training {
+export interface Training {
   id: number;
   name: string;
   description: string;

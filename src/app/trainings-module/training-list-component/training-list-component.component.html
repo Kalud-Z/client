@@ -2,7 +2,7 @@
 
 <p>training-list-component works!</p>
 
-<p *ngFor="let tr of manyTrainings" >
+<p *ngFor="let tr of manyTrainings"  (click)="onListItemClicked($event , tr)">
   {{ tr.name }}
 </p>
 
