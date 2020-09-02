@@ -1,4 +1,17 @@
 
 
-<p> this is the import component from the second module </p>
-<app-training-list-component [manyTrainings]="allTrainings" ></app-training-list-component>
+<app-training-list-component [manyTrainings]="allTrainings"
+                             (trainingSelected)="getLastSelectedTraining($event)">
+</app-training-list-component>
+
+
+<app-trainings-details
+  *ngIf="selectedTraining"
+  [training]="selectedTraining">
+</app-trainings-details>
+
+
+
+
+
+

@@ -1,5 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Training} from '../../app.component';
+import {Component, Input, Output , EventEmitter} from '@angular/core';
+
+import {TrainingSelectedEvent} from '../trainingSelectedEvent';
+import {Training} from '../training.model';
+
+
 
 @Component({
   selector: 'app-training-list-component',
@@ -8,18 +12,26 @@ import {Training} from '../../app.component';
 })
 
 
-export class TrainingListComponentComponent implements OnInit {
-  @Input() manyTrainings : Training[];
+export class TrainingListComponentComponent  {
+  @Input() manyTrainings: Training[];
 
-
-
-  ngOnInit(): void {
-  }
+  @Output() trainingSelected = new EventEmitter<TrainingSelectedEvent>();
 
 
   onListItemClicked(event , tr: Training) {
-    console.log(event , tr.name )
+    const selectedEvent = new TrainingSelectedEvent(tr);
+    this.trainingSelected.emit(selectedEvent);
   }
 
 
 }
+
+
+
+
+
+
+
+
+
+

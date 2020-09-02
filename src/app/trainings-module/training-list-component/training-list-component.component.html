@@ -1,8 +1,8 @@
 <p>----------------------------------------------</p>
 
-<p>training-list-component works!</p>
+<p> so far we have {{ manyTrainings.length }} available</p>
 
-<p *ngFor="let tr of manyTrainings"  (click)="onListItemClicked($event , tr)">
+<p *ngFor="let tr of manyTrainings" [ngClass]="{'dead': tr.discontinued}"  (click)="onListItemClicked($event , tr)">
   {{ tr.name }}
 </p>
 
