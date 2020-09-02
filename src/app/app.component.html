@@ -1,6 +1,6 @@
 
 
-<app-training-list-component [manyTrainings]="allTrainings"
+<app-training-list-component [manyTrainings]="allTrainings$ | async"
                              (trainingSelected)="getLastSelectedTraining($event)">
 </app-training-list-component>
 

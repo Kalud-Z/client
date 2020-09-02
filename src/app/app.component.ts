@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {Training} from './trainings-module/training.model';
 import {TrainingSelectedEvent} from './trainings-module/trainingSelectedEvent';
 import {TrainingService} from './trainings-module/training.service';
+import {Observable} from 'rxjs';
 
 
 
@@ -14,12 +15,12 @@ import {TrainingService} from './trainings-module/training.service';
 
 export class AppComponent implements OnInit {
   selectedTraining: Training;
-  allTrainings: Training[];
+  allTrainings$: Observable<Training[]>;
 
   constructor(private trainingService: TrainingService) {}
 
   ngOnInit() {
-    this.allTrainings = this.trainingService.getAll();
+    this.allTrainings$ = this.trainingService.getAll();
   }
 
   getLastSelectedTraining(event: TrainingSelectedEvent) {
