@@ -6,4 +6,7 @@
 </div>
 
 <div> {{training.description}} </div>
+
+<div> date : {{training.nextRun | date }} </div>
+
 <div *ngIf="training.imageUrl"> <img [src]="training.imageUrl" class="logo"> </div>
