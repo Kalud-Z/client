@@ -13,7 +13,8 @@ import {TrainingsModuleModule} from './trainings-module/trainings-module.module'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TrainingsModuleModule
+    TrainingsModuleModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

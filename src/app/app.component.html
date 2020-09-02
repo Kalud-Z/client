@@ -1,14 +1,9 @@
 
 
-<app-training-list-component [manyTrainings]="allTrainings$ | async"
-                             (trainingSelected)="getLastSelectedTraining($event)">
-</app-training-list-component>
+<h1>displaying different trainings</h1>
 
+<router-outlet></router-outlet>
 
-<app-trainings-details
-  *ngIf="selectedTraining"
-  [training]="selectedTraining">
-</app-trainings-details>
 
 
 
