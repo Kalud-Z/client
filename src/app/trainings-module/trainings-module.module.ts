@@ -5,6 +5,7 @@ import { TrainingsDetailsComponent } from './trainings-details/trainings-details
 import {FormsModule} from '@angular/forms';
 import { TakePlaceSoonPipe } from './take-place-soon.pipe';
 import { TrainingListRouteComponent } from './training-list-route/training-list-route.component';
+import { TrainingDetailsRouteComponent } from './training-details-route/training-details-route.component';
 
 
 
@@ -13,7 +14,8 @@ import { TrainingListRouteComponent } from './training-list-route/training-list-
     TrainingListComponentComponent,
     TrainingsDetailsComponent,
     TakePlaceSoonPipe,
-    TrainingListRouteComponent
+    TrainingListRouteComponent,
+    TrainingDetailsRouteComponent
   ],
   imports: [
     CommonModule,

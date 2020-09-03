@@ -4,6 +4,9 @@ import {Training} from './training.model';
 import { TRAININGS } from './training.mock';
 import {Observable, ReplaySubject} from 'rxjs';
 
+import { map } from 'rxjs/operators';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +23,20 @@ export class TrainingService {
 
   getAll(): Observable<Training[]> { return this.TrSubject$; }
 
-}
 
-// end class ############################################################################################
+  getById(id: number): Observable<Training> {
+    return this.getAll()
+      .pipe(
+        map(ts => {
+          const training = ts.find(t => t.id === id);
+          if (training) {
+            return training
+          } else {
+            throw new Error(`Could not find training with id ${id}`);
+          }
+        })
+      );
+  }
+
+
+} // end class ############################################################################################
