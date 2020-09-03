@@ -11,3 +11,29 @@
 
 <div *ngIf="training.imageUrl"> <img [src]="training.imageUrl" class="logo"> </div>
 
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>Name:
+    <input type="text" [formControl]="form.controls['name']">
+  </label>
+
+  <label>Date:
+    <input type="date" formControlName="nextRun">
+  </label>
+
+  <label>is the course no longer available ?
+    <input type="text" formControlName="discontinued">
+  </label>
+
+
+  <label> Description
+    <input type="text" formControlName="description">
+  </label>
+
+  <button type="submit">Save</button>
+  <button type="button" (click)="goBack()">Cancel</button>
+</form>
+
+
+
+

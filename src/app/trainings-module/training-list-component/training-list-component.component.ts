@@ -4,6 +4,7 @@ import {TrainingSelectedEvent} from '../trainingSelectedEvent';
 import {Training} from '../training.model';
 import {Subscription} from 'rxjs';
 import {TrainingService} from '../training.service';
+import {FormControl, FormGroup} from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ export class TrainingListComponentComponent implements OnInit, OnDestroy {
   manyTrainings: Training[];
   trainingsSubscription: Subscription;
   selectedTraining: Training;
-  @Output() trainingSelected = new EventEmitter<TrainingSelectedEvent>();
+
+
 
   constructor(private trainingService: TrainingService) {}
 
@@ -31,9 +33,7 @@ export class TrainingListComponentComponent implements OnInit, OnDestroy {
 
 
   onListItemClicked(event , tr: Training) {
-    this.selectedTraining = tr;
-    const selectedEvent = new TrainingSelectedEvent(tr);
-    this.trainingSelected.emit(selectedEvent);
+
   }
 
 
