@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Training} from '../training.model';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -19,10 +19,10 @@ export class TrainingsDetailsComponent implements OnInit { // ##################
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      name: new FormControl(this.training.name),
+      name: new FormControl(this.training.name , Validators.required),
       nextRun: new FormControl(this.training.nextRun),
       discontinued: new FormControl(this.training.discontinued),
-      description: new FormControl(this.training.description)
+      description: new FormControl(this.training.description , Validators.minLength(10))
     });
   }
 

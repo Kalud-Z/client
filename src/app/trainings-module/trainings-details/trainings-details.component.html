@@ -15,6 +15,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <label>Name:
     <input type="text" [formControl]="form.controls['name']">
+    <p *ngIf="form.controls['name'].invalid" > Invalid input ! U have to enter a name </p>
   </label>
 
   <label>Date:
@@ -28,9 +29,10 @@
 
   <label> Description
     <input type="text" formControlName="description">
+    <p *ngIf="form.controls['description'].invalid" > Invalid description . its too short ! </p>
   </label>
 
-  <button type="submit">Save</button>
+  <button type="submit" [disabled]="form.invalid" >Save</button>
   <button type="button" (click)="goBack()">Cancel</button>
 </form>
 
