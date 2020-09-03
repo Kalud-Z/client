@@ -15,7 +15,6 @@ import { map } from 'rxjs/operators';
 export class TrainingService {
   private TrSubject$ = new ReplaySubject<Training[]>(1);
 
-
   constructor() {
     this.TrSubject$.next(TRAININGS);
   }

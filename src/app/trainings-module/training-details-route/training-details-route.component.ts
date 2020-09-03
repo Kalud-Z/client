@@ -14,7 +14,7 @@ import {TrainingService} from '../training.service';
 })
 
 export class TrainingDetailsRouteComponent implements OnInit {
-  private training$: Observable<Training>;
+  training$: Observable<Training>;
 
   constructor(
     private route: ActivatedRoute,

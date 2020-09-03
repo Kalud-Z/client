@@ -2,9 +2,10 @@
 
 <p> so far we have {{ manyTrainings.length }} available</p>
 
-<p *ngFor="let tr of manyTrainings"
-   [ngClass]="{'dead': tr.discontinued , selected : tr === selectedTraining }"
-   (click)="onListItemClicked($event , tr)">
+<a  *ngFor="let tr of manyTrainings"
+    [routerLink]="['/training', tr.id]"
+    [ngClass]="{'dead': tr.discontinued , selected : tr === selectedTraining }"
+    (click)="onListItemClicked($event , tr)">
   {{ tr.name }}
-</p>
+</a>
 
