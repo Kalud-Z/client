@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {TrainingListComponentComponent} from './trainings-module/training-list-component/training-list-component.component';
+import {TrainingListRouteComponent} from './trainings-module/training-list-route/training-list-route.component';
 
 
 const routes: Routes = [
-  { path: 'training', component: TrainingListComponentComponent },
+  { path: 'training', component: TrainingListRouteComponent },
   { path: '**', redirectTo: '/training' }
 ];
 

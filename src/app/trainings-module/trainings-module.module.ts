@@ -4,6 +4,7 @@ import { TrainingListComponentComponent } from './training-list-component/traini
 import { TrainingsDetailsComponent } from './trainings-details/trainings-details.component';
 import {FormsModule} from '@angular/forms';
 import { TakePlaceSoonPipe } from './take-place-soon.pipe';
+import { TrainingListRouteComponent } from './training-list-route/training-list-route.component';
 
 
 
@@ -11,7 +12,8 @@ import { TakePlaceSoonPipe } from './take-place-soon.pipe';
   declarations: [
     TrainingListComponentComponent,
     TrainingsDetailsComponent,
-    TakePlaceSoonPipe
+    TakePlaceSoonPipe,
+    TrainingListRouteComponent
   ],
   imports: [
     CommonModule,

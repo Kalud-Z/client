@@ -44,11 +44,3 @@ export class TrainingListComponentComponent implements OnInit, OnDestroy {
 }
 
 
-
-
-
-
-
-
-
-
