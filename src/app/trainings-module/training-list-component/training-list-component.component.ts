@@ -21,8 +21,6 @@ export class TrainingListComponentComponent implements OnInit, OnDestroy {
   trainingsSubscription: Subscription;
   selectedTraining: Training;
 
-
-
   constructor(private trainingService: TrainingService) {}
 
 

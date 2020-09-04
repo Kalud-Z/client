@@ -1,2 +1,6 @@
-<app-trainings-details [training]="training$ | async"></app-trainings-details>
+<app-trainings-details
+  [training]="training$ | async"
+  (trainingChangedEvent)="editedTrainingReceived($event)"
+>
+</app-trainings-details>
 <a [routerLink]="['..']" > Go back to the list </a>

@@ -6,9 +6,7 @@
 </div>
 
 <div> {{training.description}} </div>
-
 <div [class.takePlaceSoon]="training.nextRun | takePlaceSoon"> date : {{training.nextRun | date }} </div>
-
 <div *ngIf="training.imageUrl"> <img [src]="training.imageUrl" class="logo"> </div>
 
 
@@ -26,7 +24,6 @@
     <input type="text" formControlName="discontinued">
   </label>
 
-
   <label> Description
     <input type="text" formControlName="description">
     <p *ngIf="form.controls['description'].invalid" > Invalid description . its too short ! </p>
@@ -35,7 +32,5 @@
   <button type="submit" [disabled]="form.invalid" >Save</button>
   <button type="button" (click)="goBack()">Cancel</button>
 </form>
-
-
 
 

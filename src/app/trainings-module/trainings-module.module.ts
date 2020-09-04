@@ -7,6 +7,7 @@ import { TakePlaceSoonPipe } from './take-place-soon.pipe';
 import { TrainingListRouteComponent } from './training-list-route/training-list-route.component';
 import { TrainingDetailsRouteComponent } from './training-details-route/training-details-route.component';
 import {RouterModule} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -22,7 +23,8 @@ import {RouterModule} from '@angular/router';
     CommonModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports : [
     TrainingListComponentComponent,

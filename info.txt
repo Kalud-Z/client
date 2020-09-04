@@ -1,0 +1,16 @@
+start server : 
+
+Öffne ein Terminal und wechsle in das Verzeichnis server
+Installiere die Abhängigkeiten per :  npm install --only=prod
+Starte den Server über :  node src/server.js
+Backend läuft unter http://localhost:3000/api/training
+
+
+
+
+________________________________
+
+run unti test : 
+
+ng test --watch
+

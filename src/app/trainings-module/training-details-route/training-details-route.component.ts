@@ -13,8 +13,11 @@ import {TrainingService} from '../training.service';
   styleUrls: ['./training-details-route.component.scss']
 })
 
-export class TrainingDetailsRouteComponent implements OnInit {
+// ###########################################################################################################
+export class TrainingDetailsRouteComponent implements OnInit { // ###########################################
   training$: Observable<Training>;
+  currentID: number;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +29,19 @@ export class TrainingDetailsRouteComponent implements OnInit {
       map(params => parseInt(params['id'], 10)),
       switchMap(id => this.trainingService.getById(id))
     );
+
+    this.route.params.subscribe(params => {
+      this.currentID = +params['id'];
+      console.log(this.currentID);
+    });
+
   }
 
-}
+  editedTrainingReceived(newTrainingInstance) {
+    console.log(newTrainingInstance);
+    this.trainingService.update(this.currentID , newTrainingInstance);
+  }
+
+
+} // #######################################################################################################
+// #########################################################################################################
