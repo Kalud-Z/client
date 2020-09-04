@@ -51,10 +51,10 @@ describe('Pipe: TakePlaceSoonPipe', () => {
   // });
 
   describe('with date as parameter', () => {
-    // it('should return true for today', () => {
-    //   const takePlaceSoon = pipe.transform(nowAndXDays(0));
-    //   expect(takePlaceSoon).toBe(true);
-    // });
+    it('should return true for today', () => {
+      const takePlaceSoon = pipe.transform(nowAndXDays(0));
+      expect(takePlaceSoon).toBe(true);
+    });
     it('should return false for yesterday', () => {
       const takePlaceSoon = pipe.transform(nowAndXDays(-1));
       expect(takePlaceSoon).toBe(false);
